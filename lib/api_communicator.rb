@@ -1,6 +1,8 @@
+require 'rest-client'
+
 def get_character_movies_from_api(character)
   #make the web request
-  all_characters = Net::HTTP.get('http://www.swapi.co/api/people/')
+  all_characters = RestClient.get('http://www.swapi.co/api/people/')
   character_hash = JSON.parse(all_characters)
   # iterate ove the character hash to find the collection of `films` for the given
   #   `character`
