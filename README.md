@@ -50,7 +50,12 @@ puts character_data
 
 Uh-oh, you might be thinking. The `character_data` variable that we used to capture the response from the API *isn't a nested hash*, it's a crazy long ugly-looking string.
 
-Well, not exactly. The ugly response above is actually a string of **JSON.** We can tell Ruby how to take this JSON and parse it into an easy-to-work-with Ruby hash like this:
+Well, not exactly. The ugly response above is actually a string of **JSON.** We can tell Ruby how to take this JSON and parse it into an easy-to-work-with Ruby hash. To do this, we'll first require Ruby's JSON module, which will give us access to some handy methods, including one that will help us transform the data into Ruby:
+
+```ruby
+require 'JSON'
+```
+Now, we can access our data with the `parse` method:
 
 ```ruby
 JSON.parse(character_data)
