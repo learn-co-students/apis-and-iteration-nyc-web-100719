@@ -156,7 +156,7 @@ It takes in an argument of a character's name (which gets passed to the method w
 
 The `get_character_movies` method will take in an argument of the character's name and use the Rest Client gem to query the API *for all the characters*.
 
-Then, the resulting JSON is parsed into a handy Ruby hash.
+Then, the resulting JSON is parsed into a handy Ruby hash. Don't forget to `require 'json'` at the top of the file. Any new outside libraries you use need to be required (i.e. rest-client, json, pry...).
 
 Your job is to iterate over that hash and collect the API URLs for the movies that character appears in.
 
