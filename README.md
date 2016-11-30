@@ -137,7 +137,7 @@ Why separate our program in this way? It's just more organized to separate our c
 
 First, we call the `welcome` method (which you will define in another file), then we call the `get_character_from_user` method, saving its return value to a variable, `character`. Lastly, we invoke the `show_character_movies` method, giving it an argument of the character name we captured above.
 
-Let's takea look at how and where you will define those methods!
+Let's take a look at how and where you will define those methods!
 
 ### `lib/api_communicator.rb`
 
@@ -470,3 +470,5 @@ This file is pretty basic. Define a `welcome` method that `puts` out a friendly 
 Once you have your program working as expected, challenge yourself. Can you add more methods so that a user can make additional queries to the API? Maybe a user should be able to input a movie name and get some movie info in return?
 
 You can also put your refactoring skills to work. Take a closer look at the `get_character_movies_from_api` method. Does it look kind of long to you? Can you split it up into one or two helper methods?
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/apis-and-iteration'>Apis And Iteration</a> on Learn.co and start learning to code for free.</p>
