@@ -147,8 +147,8 @@ Take note of the `show_character_movies` method.
 
 ```ruby
 def show_character_movies(character)
-  films_hash = get_character_movies_from_api(character)
-  parse_character_movies(films_hash)
+  films_array = get_character_movies_from_api(character)
+  print_movies(films_array)
 end
 ```
 
@@ -165,14 +165,14 @@ Then, you need to make a web request to each of those URLs using Rest Client. Co
 ```ruby
 def get_character_movies_from_api(character)
   #make the web request
-  all_characters = RestClient.get('http://www.swapi.co/api/people/')
-  character_hash = JSON.parse(all_characters)
+  response_string = RestClient.get('http://www.swapi.co/api/people/')
+  response_hash = JSON.parse(all_characters)
 
    # your code here
 end
 ```
 
-**Important:** You might be wondering: how do I iterate over the `character_hash` if I don't know what it looks like? Well, there are a couple of options. First of all, you can use `Pry` to freeze the program right after the `character_hash` is defined, and examine that hash in the terminal. Or, you can play around with the Star Wars API [here](https://swapi.co/). If you fill out the form to make a request to `http://www.swapi.co/people/`, you should see something like this:
+**Important:** You might be wondering: how do I iterate over the `response_hash` if I don't know what it looks like? Well, there are a couple of options. First of all, you can use `Pry` to freeze the program right after the `response_hash` is defined, and examine that hash in the terminal. Or, you can play around with the Star Wars API [here](https://swapi.co/). If you fill out the form to make a request to `http://www.swapi.co/people/`, you should see something like this:
 
 ```ruby
 {
@@ -459,7 +459,7 @@ Use this tool to preview the API requests you are making for this program. Don't
 
 **So, the `get_character_movies_from_api` method should return an array of hashes, where each hash represents a movie.**
 
-This array of hashes is what gets passed to the `parse_character_movies` method. This is the method in which you will iterate over that array of hashes to `puts` out movie information to the terminal.
+This array of hashes is what gets passed to the `print_movies` method. This is the method in which you will iterate over that array of hashes to `puts` out movie information to the terminal.
 
 ### `lib/command_line_interface.rb`
 
