@@ -7,6 +7,10 @@ def get_character_movies_from_api(character)
   response_string = RestClient.get('http://www.swapi.co/api/people/')
   response_hash = JSON.parse(response_string)
   
+  # NOTE: in this demonstration we name many of the variables _hash or _array. 
+  # This is done for educational purposes. This is not typically done in code.
+
+
   # iterate over the response hash to find the collection of `films` for the given
   #   `character`
   # collect those film API urls, make a web request to each URL to get the info
