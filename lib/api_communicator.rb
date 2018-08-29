@@ -17,9 +17,9 @@ def get_character_movies_from_api(character)
   #  for that film
   # return value of this method should be collection of info about each film.
   #  i.e. an array of hashes in which each hash reps a given film
-  # this collection will be the argument given to `parse_character_movies`
-  #  and that method will do some nice presentation stuff: puts out a list
-  #  of movies by title. play around with puts out other info about a given film.
+  # this collection will be the argument given to `print_movies`
+  #  and that method will do some nice presentation stuff like puts out a list
+  #  of movies by title. Have a play around with the puts with other info about a given film.
 end
 
 def print_movies(films_hash)
