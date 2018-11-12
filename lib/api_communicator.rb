@@ -22,7 +22,7 @@ def get_character_movies_from_api(character)
   #  of movies by title. Have a play around with the puts with other info about a given film.
 end
 
-def print_movies(films_hash)
+def print_movies(films_array)
   # some iteration magic and puts out the movies in a nice list
 end
 
